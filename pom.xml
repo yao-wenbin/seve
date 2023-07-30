@@ -12,6 +12,7 @@
     <modules>
         <module>seve-auth</module>
         <module>seve-common</module>
+        <module>seve-gateway</module>
     </modules>
 
     <properties>
