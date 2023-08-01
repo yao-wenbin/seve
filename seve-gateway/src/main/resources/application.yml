@@ -4,21 +4,16 @@ spring:
   application:
     name: seve-gateway
   cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
     gateway:
-#      discovery:
-#        locator:
-#          enabled: true
       routes:
         - id: seve-auth
-#          uri: lb://seve-auth
+          uri: lb://seve-auth
           predicates:
             - Path=/seve-auth/**
-          uri: http://localhost:8081
           filters:
            - StripPrefix=1
-        - id: sevice2
-          predicates:
-            - Path=/get
-          uri: http://www.baidu.com
 
           
